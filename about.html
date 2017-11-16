@@ -36,7 +36,95 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/theme-colors/dark-blue.css"/> <!-- changes color of buttons and links to dark blue -->
-</head>
+
+	<!-- Content needed for slider -->
+	
+<style>	 
+#containerBanner {
+	width: 4000px;
+	overflow: hidden;
+	margin: 50px auto;
+	background: white;
+}
+
+.photobanner {
+	height: 766px;
+	width: 3550px;
+	margin-bottom: 0px;
+	overflow:hidden;
+	}
+	
+	.photobanner img {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+/*keyframe animations*/
+.first {
+	-webkit-animation: bannermove 50s linear infinite;
+	   -moz-animation: bannermove 50s linear infinite;
+	    -ms-animation: bannermove 50s linear infinite;
+	     -o-animation: bannermove 50s linear infinite;
+	        animation: bannermove 50s linear infinite;
+}
+ 
+@keyframes "bannermove" {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -4425px;
+ }
+ 
+}
+ 
+@-moz-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -4425px;
+ }
+ 
+}
+ 
+@-webkit-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -4425px;
+ }
+ 
+}
+ 
+@-ms-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -4425px;
+ }
+ 
+}
+ 
+@-o-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -4425px;
+ }
+ 
+}
+ 
+</style>
+	
+	
+	</head>
 
 <body class="header-fixed header-fixed-space">
 <div class="wrapper">
@@ -307,6 +395,21 @@
             </div>
         </div><!--/end container-->
     </div>
+	
+	<div id="containerBanner">
+    
+
+    <div class="photobanner">
+    	<img class="first" src="assets/img/flip/frame1.jpg" alt="" />
+    	<img src="assets/img/flip/frame2.jpg" alt="" />
+    	<img src="assets/img/flip/frame3.jpg" alt="" />
+		<img src="assets/img/flip/frame1.jpg" alt="" />
+    	<img src="assets/img/flip/frame2.jpg" alt="" />
+     	<img src="assets/img/flip/frame3.jpg" alt="" />
+		<img src="assets/img/flip/frame1.jpg" alt="" />
+    	<img src="assets/img/flip/frame2.jpg" alt="" />
+    </div>
+	
     <!--=== End Testimonials v6 ===-->
 
     <!--=== Owl Clients v1 ===-->
