@@ -656,6 +656,21 @@
     <!--=== End Footer v6 ===-->
 </div><!--/wrapper-->
 
+<!--Firebase init-->
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAKMGzXMLlT5QkMzl4lzZyXsO08_VebAQg",
+    authDomain: "ssrfa-6b1be.firebaseapp.com",
+    databaseURL: "https://ssrfa-6b1be.firebaseio.com",
+    projectId: "ssrfa-6b1be",
+    storageBucket: "",
+    messagingSenderId: "357422260342"
+  };
+  firebase.initializeApp(config);
+</script>
 <!-- JS Global Compulsory -->
 <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
