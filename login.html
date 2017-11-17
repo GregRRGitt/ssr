@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Sample FirebaseUI App</title>
+    <title>SSR Login page</title>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
     <script>
       // Initialize Firebase
       var config = {
@@ -16,10 +17,6 @@
         };
         firebase.initializeApp(config);
       </script>
-    <!-- *******************************************************************************************
-       * TODO(DEVELOPER): Paste the initialization snippet from:
-       * Firebase Console > Overview > Add Firebase to your web app. *
-       ***************************************************************************************** -->
     <script src="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.css" />
     <script type="text/javascript">
@@ -28,8 +25,8 @@
         signInSuccessUrl: 'https://www.ssrfa.com/index.html',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-          firebase.auth..PROVIDER_ID
+          //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
         ],
         // Terms of service url.
         tosUrl: 'https://www.ssrfa.com/index.html'
@@ -40,11 +37,224 @@
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Web Fonts -->
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="assets/css/headers/header-v6.css">
+    <link rel="stylesheet" href="assets/css/footers/footer-v6.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets/plugins/animate.css">
+    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/plugins/master-slider/masterslider/style/masterslider.css">
+    <link rel='stylesheet' href="assets/plugins/master-slider/masterslider/skins/black-2/style.css">
+
+    <!-- CSS Pages Style -->
+    <link rel="stylesheet" href="assets/css/pages/page_one.css">
+    <link rel="stylesheet" href="assets/css/theme-colors/dark-blue.css"/> <!-- changes color of buttons and links to dark blue -->
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+
   </head>
   <body>
-    <!-- The surrounding HTML is left untouched by FirebaseUI.
-         Your app may use that space for branding, controls and other customizations.-->
-    <h1>Welcome to My Awesome App</h1>
-    <div id="firebaseui-auth-container"></div>
+  <div class="wrapper">
+      <!--=== Header v6 ===-->
+      <div class="header-v6 header-classic-white header-sticky">
+          <!-- Navbar -->
+          <div class="navbar mega-menu" role="navigation">
+              <div class="container container-space">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="menu-container">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+
+                      <!-- Navbar Brand -->
+                      <div class="navbar-brand">
+                          <a href="index.html">
+                              <img class="shrink-logo" src="assets/img/logo1-default.png" alt="Logo">
+                          </a>
+                      </div>
+                      <!-- ENd Navbar Brand -->
+                  </div>
+
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse navbar-responsive-collapse">
+                      <div class="menu-container">
+                          <ul class="nav navbar-nav">
+                              <!-- Home -->
+                              <li class="dropdown active">
+                                <a href="index.html">
+                                      Home
+                                    </a>
+                              </li>
+                              <!-- End Home -->
+
+                              <!-- About -->
+                              <li class="dropdown">
+                                  <a href="about.html">
+                                      About
+                                  </a>
+                              </li>
+                              <!-- End About -->
+
+                              <!-- Blog -->
+                              <li class="dropdown">
+                                  <a href="products.html">
+                                      Products
+                                  </a>
+                              </li>
+                              <!-- End Blog -->
+
+                              <!-- Portfolio -->
+                              <li class="dropdown">
+                                  <a href="services.html">
+                                      Services
+                                  </a>
+                              </li>
+                              <!-- End Portfolio -->
+
+                              <!-- Features -->
+                              <li class="dropdown">
+                                  <a href="customers.html">
+                                      Customers
+                                  </a>
+                              </li>
+                              <!-- End Features -->
+
+                              <!-- Features -->
+                              <li class="dropdown">
+                                  <a href="construction.html">
+                                      Construction
+                                  </a>
+                              </li>
+                              <!-- End Features -->
+
+                              <!-- Shortcodes -->
+                              <li class="dropdown">
+                                  <a href="careers.html">
+                                      Careers
+                                  </a>
+                              </li>
+                              <!-- End Shortcodes -->
+
+                              <!-- Misc Pages -->
+                              <li class="dropdown">
+                                  <a href="contact.html">
+                                      Contact
+                                  </a>
+                              </li>
+                              <!-- End Misc Pages -->
+                          </ul>
+                      </div>
+                  </div><!--/navbar-collapse-->
+              </div>
+          </div>
+          <!-- End Navbar -->
+      </div>
+      <!--=== End Header v6 ===-->
+
+      <!--=== Content ===-->
+      <div id="firebaseui-auth-container"></div>
+      <!--=== End Content ===-->
+
+      <!--=== Footer v6 ===-->
+      <div id="footer-v6" class="footer-v6">
+          <div class="footer">
+              <div class="container">
+                  <div class="row">
+                      <!-- About Us -->
+                      <div class="col-md-3 sm-margin-bottom-40">
+                          <div class="heading-footer"><h2>About SSR</h2></div>
+                          <p>We provide the very best in manufactoring and engineering. We offer products created with extreme precision and care.</p>
+                      </div>
+                      <!-- End About Us -->
+
+                      <!-- Recent News -->
+                      <div class="col-md-3 sm-margin-bottom-40">
+
+                      </div>
+                      <!-- End Recent News -->
+
+                      <!-- Useful Links -->
+                      <div class="col-md-3 sm-margin-bottom-40">
+                          <div class="heading-footer"><h2>Site Map</h2></div>
+                          <ul class="list-unstyled footer-link-list">
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="products.html">Products</a></li>
+                              <li><a href="services.html">Services</a></li>
+                              <li><a href="customers.html">Customers</a></li>
+                              <li><a href="construction.html">Construction</a></li>
+                              <li><a href="careers.html">Careers</a></li>
+                              <li><a href="contact.html">Contact</a></li>
+
+                          </ul>
+                      </div>
+                      <!-- End Useful Links -->
+
+                      <!-- Contacts -->
+                      <div class="col-md-3">
+                          <div class="heading-footer"><h2>Contact</h2></div>
+                          <ul class="list-unstyled contacts">
+                              <li>
+                                  <i class="radius-3x fa fa-map-marker"></i>
+                                      1320 Freeport Blvd. #111 & 116
+                                      Sparks, NV 89431 USA
+                              </li>
+                              <li>
+                                  <i class="radius-3x fa fa-phone"></i>
+                                  Tel: 775-502-3262<br>
+                                  Fax: 775-502-3272
+                              </li>
+                              <li>
+                                  <i class="radius-3x fa fa-globe"></i>
+                                  <a href="#">info@ssrfa.com</a><br>
+                                  <a href="#">www.ssrfa.com</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <!-- End Contacts -->
+                  </div>
+              </div><!--/container -->
+          </div>
+
+          <div class="copyright">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-8 sm-margon-bottom-10">
+                          <ul class="list-inline terms-menu">
+                              <li class="silver">Copyright © 2014-2017 - All Rights Reserved</li>
+                              <li><a href="#">Terms of Use</a></li>
+                              <li><a href="#">Privacy and Policy</a></li>
+                              <li><a href="#">License</a></li>
+                              <li><a href="#">Support</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--=== End Footer v6 ===-->
+  </div--><!--/wrapper-->
   </body>
 </html>
